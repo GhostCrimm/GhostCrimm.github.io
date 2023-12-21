@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cheat Menus</title>
+    <style>
+        body {
+            background-color: black;
+            color: rgb(255, 255, 255);
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            stroke: black;
+            stroke-width: 5px;
+            stroke-opacity: 100px;
+        }
+
+        .menu {
+            background-color: #333;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+            margin: 20px;
+        }
+
+        .module {
+            margin-bottom: 10px;
+        }
+
+        .button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: red;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .button:hover {
+            background-color: darkred;
+        }
+
+        input[type="range"] {
+            width: 100%;
+            margin-top: 5px;
+        }
+
+        #messagePopup {
+            display: none;
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(255, 0, 0, 0.8);
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+            z-index: 999;
+            animation: glow 1s infinite alternate;
+        }
+
+        @keyframes glow {
+            from {
+                box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+            }
+            to {
+                box-shadow: 0 0 40px rgba(255, 0, 0, 0.8);
+            }
+        }
+    </style>
+
+<div class="title">
+    <p>CrimZon 1.0</p>
+</div>
+    
+    <style>
+    .title{
+    background: #FF0000;
+    width: 200px;
+    height: 50px;
+    border-radius: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+    .title > p{
+    font-family: 'Minecraft',sans-serif;
+    font-size: 25px;
+    height: fit-content;
+    height: 30px;
+    color: #FFF;
+    }
+    </style>
+
+<style>
+    @import url('https://fonts.cdnfonts.com/css/minecraft-4');
+</style>
+
+<style>
+    /*for all text or universal font*/
+    body{
+    font-family: 'Minecraft',sans-serif;
+    font-size: smaller;
+    }
+</style>
+
+    
+</head>
+<body>
+
+<div class="menu" id="playerMenu">
+    <h1>=Player-Advantage=</h1>
+
+    <button class="button" onclick="applyPlayerChanges('Fly')">Kill All</button>
+
+    <div class="module">
+        <label for="playerFlyToggle">Fly</label>
+        <input type="range" id="playerFlyToggle" min="0" max="" step="1" value="0">
+    </div>
+
+    <button class="button" onclick="applyPlayerChanges('Speed')">Speed</button>
+
+    <div class="module">
+        <label for="playerSpeedToggle">Speed</label>
+        <input type="range" id="playerSpeedToggle" min="0" max="30" step="1" value="0">
+    </div>
+
+    <button class="button" onclick="applyPlayerChanges('Phase')">Phase</button>
+
+    <div class="module">
+        <label for="playerPhaseToggle">Phase</label>
+        <input type="range" id="playerPhaseToggle" min="0" max="100" step="1" value="0">
+    </div>
+
+    <button class="button" onclick="applyPlayerChanges('Apply')">Apply Changes</button>
+</div>
+
+<div class="menu" id="VisualMenu">
+    <h1>===Visuals===</h1>
+
+    <button class="button" onclick="applyVisualChanges('ESP')">ESP</button>
+
+    <div class="module">
+        <label for="VisualESPToggle">ESP-Range</label>
+        <input type="range" id="VisualESPToggle" min="0" max="100" step="1" value="0">
+    </div>
+
+    <button class="button" onclick="applyMobChanges('Speed')">Speed</button>
+
+    <div class="module">
+        <label for="mobSpeedToggle">Speed</label>
+        <input type="range" id="mobSpeedToggle" min="0" max="30" step="1" value="0">
+    </div>
+
+    <button class="button" onclick="applyMobChanges('Phase')">Phase</button>
+
+    <div class="module">
+        <label for="mobPhaseToggle">Phase</label>
+        <input type="range" id="mobPhaseToggle" min="0" max="100" step="1" value="0">
+    </div>
+
+    <button class="button" onclick="applyMobChanges('Apply')">Apply Changes</button>
+</div>
+
+<div class="menu" id="playerMenu">
+    <h1>===Server===</h1>
+
+    <button class="button" onclick="applyPlayerChanges('No Packet')">No Packet</button>
+
+    <div class="module">
+        <label for="playerFlyToggle">Fly</label>
+        <input type="range" id="playerFlyToggle" min="0" max="" step="1" value="0">
+    </div>
+
+    <button class="button" onclick="applyPlayerChanges('Speed')">Timer</button>
+
+    <div class="module">
+        <label for="playerSpeedToggle">Speed</label>
+        <input type="range" id="playerSpeedToggle" min="0" max="30" step="1" value="0">
+    </div>
+
+    <button class="button" onclick="applyPlayerChanges('Phase')">Phase</button>
+
+    <div class="module">
+        <label for="playerPhaseToggle">Phase</label>
+        <input type="range" id="playerPhaseToggle" min="0" max="100" step="1" value="0">
+    </div>
+
+    <button class="button" onclick="applyPlayerChanges('Apply')">Apply Changes</button>
+</div>
+
+<div class="menu" id="mobMenu">
+    <h1>===Extras===</h1>
+
+    <button class="button" onclick="applyMobChanges('Fly')">Fly</button>
+
+    <div class="module">
+        <label for="mobFlyToggle">Fly</label>
+        <input type="range" id="mobFlyToggle" min="0" max="" step="1" value="0">
+    </div>
+
+    <button class="button" onclick="applyMobChanges('Speed')">Speed</button>
+
+    <div class="module">
+        <label for="mobSpeedToggle">Speed</label>
+        <input type="range" id="mobSpeedToggle" min="0" max="30" step="1" value="0">
+    </div>
+
+    <button class="button" onclick="applyMobChanges('Phase')">Phase</button>
+
+    <div class="module">
+        <label for="mobPhaseToggle">Phase</label>
+        <input type="range" id="mobPhaseToggle" min="0" max="100" step="1" value="0">
+    </div>
+
+    <button class="button" onclick="applyMobChanges('Apply')">Apply Changes</button>
+</div>
+
+<div id="messagePopup"></div>
+
+<script>
+    
+    function showMessage(message) {
+        const messagePopup = document.getElementById('messagePopup');
+        messagePopup.innerHTML = message;
+        messagePopup.style.display = 'block';
+        setTimeout(() => {
+            messagePopup.style.display = 'none';
+        }, 2000);
+    }
+
+    function applyPlayerChanges(module) {
+        const flyValue = document.getElementById('playerFlyToggle').value;
+        const speedValue = document.getElementById('playerSpeedToggle').value;
+        const phaseValue = document.getElementById('playerPhaseToggle').value;
+
+        console.log(`Player ${module}: Fly=${flyValue}, Speed=${speedValue}, Phase=${phaseValue}`);
+
+        // Add logic to apply changes to the player in the game
+
+        showMessage(`Player ${module} module enabled!`);
+    }
+
+    function applyVisualChanges(module) {
+        const ESPValue = document.getElementById('VisualESPToggle').value;
+        const speedValue = document.getElementById('mobSpeedToggle').value;
+        const phaseValue = document.getElementById('mobPhaseToggle').value;
+
+        console.log(`Visuals ${module}: Fly=${flyValue}, Speed=${speedValue}, Phase=${phaseValue}`);
+
+        // Add logic to apply changes to mobs in the game
+
+        showMessage(`Visual ${module} module enabled!`);
+
+        function applyPlayerChanges(module) {
+        const flyValue = document.getElementById('playerFlyToggle').value;
+        const speedValue = document.getElementById('playerSpeedToggle').value;
+        const phaseValue = document.getElementById('playerPhaseToggle').value;
+
+        console.log(`Server ${module}: Fly=${flyValue}, Speed=${speedValue}, Phase=${phaseValue}`);
+
+        // Add logic to apply changes to the player in the game
+
+        showMessage(`Server ${module} module enabled!`);
+    }
+
+    function applyMobChanges(module) {
+        const flyValue = document.getElementById('mobFlyToggle').value;
+        const speedValue = document.getElementById('mobSpeedToggle').value;
+        const phaseValue = document.getElementById('mobPhaseToggle').value;
+
+        console.log(`Mob ${module}: Fly=${flyValue}, Speed=${speedValue}, Phase=${phaseValue}`);
+
+        // Add logic to apply changes to mobs in the game
+
+        showMessage(`Mob ${module} module enabled!`);
+
+    }
+
+
+    }
+</script>
+
+<script>
+    function applyPlayerChanges(module) {
+        const flyValue = document.getElementById('playerFlyToggle').value;
+        const speedValue = document.getElementById('playerSpeedToggle').value;
+        const phaseValue = document.getElementById('playerPhaseToggle').value;
+
+        console.log(`Player ${module}: Fly=${flyValue}, Speed=${speedValue}, Phase=${phaseValue}`);
+
+        // Send command to Minecraft server
+        sendCommand(`.fly ${flyValue}`);
+
+        showMessage(`Player ${module} module enabled!`);
+    }
+
+    function applyMobChanges(module) {
+        const flyValue = document.getElementById('mobFlyToggle').value;
+        const speedValue = document.getElementById('mobSpeedToggle').value;
+        const phaseValue = document.getElementById('mobPhaseToggle').value;
+
+        console.log(`Mob ${module}: Fly=${flyValue}, Speed=${speedValue}, Phase=${phaseValue}`);
+
+        // Send command to Minecraft server
+        sendCommand(`/kill @e ${flyValue}`);
+
+        showMessage(`Mob ${module} module enabled!`);
+    }
+
+    function sendCommand(command) {
+        // Assuming you have a function to send commands to the server
+        // Modify this function based on your server-side setup
+        // Example using WebSocket or AJAX to send the command
+        // Replace 'your_server_url' with the actual server URL
+        const serverUrl = 'add.aternos.org/GhostFreeSMP';
+        const socket = new WebSocket(serverUrl);
+        socket.onopen = function () {
+            socket.send(command);
+            socket.close();
+        };
+    }
+</script>
+
+<script>
+    async function applyPlayerChanges(module) {
+      const flyValue = document.getElementById('playerFlyToggle').value;
+      const speedValue = document.getElementById('playerSpeedToggle').value;
+      const phaseValue = document.getElementById('playerPhaseToggle').value;
+  
+      console.log(`Player ${module}: Fly=${flyValue}, Speed=${speedValue}, Phase=${phaseValue}`);
+  
+      // Send data to the server
+      await fetch(`/applyPlayerChanges?module=${module}&flyValue=${flyValue}&speedValue=${speedValue}&phaseValue=${phaseValue}`);
+  
+      showMessage(`Player ${module} module enabled!`);
+    }
+  
+    // Similar changes for applyMobChanges
+  </script>
+  
+
+</body>
+</html>
